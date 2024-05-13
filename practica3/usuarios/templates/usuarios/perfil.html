@@ -1,0 +1,12 @@
+<h1>Perfil de {{ user.username }}</h1>
+<p>Email: {{ user.email }}</p>
+<p>CUI: {{ user.cui }}</p>
+<p>Profesión: {{ user.get_profesion_display }}</p>
+
+<h2>Archivos subidos</h2>
+<ul>
+  {% for archivo in archivos %}
+    <li><a href="{{ archivo.archivo.url }}">{{ archivo.archivo.name }}</a></li>
+  {% endfor %}
+</ul>
+ 

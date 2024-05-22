@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de texto</title>
+</head>
+<body>
+    <h1>Inserción de texto</h1>
+    <form action="{% url 'analisis' %}" method="post">
+        {% csrf_token %}
+        <textarea name="text" rows="10" cols="80"></textarea><br>
+        <button type="submit">Analizar</button>
+    </form>
+</body>
+</html>
